@@ -39,6 +39,7 @@
             cmdAbrir.TabIndex = 0;
             cmdAbrir.Text = "Abrir botonera";
             cmdAbrir.UseVisualStyleBackColor = true;
+            cmdAbrir.Click += cmdAbrir_Click;
             // 
             // frmControles
             // 
@@ -49,6 +50,7 @@
             Name = "frmControles";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Control de interfaz gráfica";
+            Load += frmControles_Load;
             ResumeLayout(false);
         }
 

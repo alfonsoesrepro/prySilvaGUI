@@ -30,8 +30,7 @@
         {
             cmdAtras = new Button();
             cmdSiguiente = new Button();
-            cmdAgregar = new Button();
-            txtAgregado = new TextBox();
+            lblNombre = new Label();
             SuspendLayout();
             // 
             // cmdAtras
@@ -42,6 +41,7 @@
             cmdAtras.TabIndex = 0;
             cmdAtras.Text = "<--";
             cmdAtras.UseVisualStyleBackColor = true;
+            cmdAtras.Click += cmdAtras_Click;
             // 
             // cmdSiguiente
             // 
@@ -51,22 +51,16 @@
             cmdSiguiente.TabIndex = 1;
             cmdSiguiente.Text = "-->";
             cmdSiguiente.UseVisualStyleBackColor = true;
+            cmdSiguiente.Click += cmdSiguiente_Click;
             // 
-            // cmdAgregar
+            // lblNombre
             // 
-            cmdAgregar.Location = new Point(200, 181);
-            cmdAgregar.Name = "cmdAgregar";
-            cmdAgregar.Size = new Size(75, 23);
-            cmdAgregar.TabIndex = 2;
-            cmdAgregar.Text = "Agregar";
-            cmdAgregar.UseVisualStyleBackColor = true;
-            // 
-            // txtAgregado
-            // 
-            txtAgregado.Location = new Point(186, 124);
-            txtAgregado.Name = "txtAgregado";
-            txtAgregado.Size = new Size(100, 23);
-            txtAgregado.TabIndex = 4;
+            lblNombre.AutoSize = true;
+            lblNombre.ForeColor = SystemColors.Control;
+            lblNombre.Location = new Point(205, 201);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(0, 15);
+            lblNombre.TabIndex = 3;
             // 
             // frmBotonera
             // 
@@ -74,12 +68,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
             ClientSize = new Size(484, 461);
-            Controls.Add(txtAgregado);
-            Controls.Add(cmdAgregar);
+            Controls.Add(lblNombre);
             Controls.Add(cmdSiguiente);
             Controls.Add(cmdAtras);
             Name = "frmBotonera";
             Text = "Botonera";
+            Load += frmBotonera_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -88,7 +82,6 @@
 
         private Button cmdAtras;
         private Button cmdSiguiente;
-        private Button cmdAgregar;
-        private TextBox txtAgregado;
+        private Label lblNombre;
     }
 }
