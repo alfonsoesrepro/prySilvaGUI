@@ -28,18 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            cmdAbrir = new Button();
             SuspendLayout();
+            // 
+            // cmdAbrir
+            // 
+            cmdAbrir.Location = new Point(12, 12);
+            cmdAbrir.Name = "cmdAbrir";
+            cmdAbrir.Size = new Size(94, 23);
+            cmdAbrir.TabIndex = 0;
+            cmdAbrir.Text = "Abrir botonera";
+            cmdAbrir.UseVisualStyleBackColor = true;
+            cmdAbrir.Click += this.cmdAbrir_Click;
             // 
             // frmControles
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(484, 461);
+            Controls.Add(cmdAbrir);
             Name = "frmControles";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Control de interfaz gráfica";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button cmdAbrir;
     }
 }
