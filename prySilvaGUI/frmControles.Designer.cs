@@ -39,7 +39,6 @@
             cmdAbrir.TabIndex = 0;
             cmdAbrir.Text = "Abrir botonera";
             cmdAbrir.UseVisualStyleBackColor = true;
-            cmdAbrir.Click += this.cmdAbrir_Click;
             // 
             // frmControles
             // 
