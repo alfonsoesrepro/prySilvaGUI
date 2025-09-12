@@ -16,5 +16,10 @@ namespace prySilvaGUI
         {
             InitializeComponent();
         }
+
+        string[] vecNombres = new string[4];
+    
+    
+    
     }
 }
