@@ -12,17 +12,17 @@ namespace prySilvaGUI
 {
     public partial class frmBotonera : Form
     {
+        public string[] vecNombres = new string[4];
+        int i = 0;
+        
         public frmBotonera()
         {
             InitializeComponent();
         }
 
-        string[] vecNombres = new string[4];
-        int i = 0;
-
         private void frmBotonera_Load(object sender, EventArgs e)
         {
-            vecNombres[0] = "Ana";
+            //vecNombres[0] = "Ana";
             vecNombres[1] = "Juan";
             vecNombres[2] = "Pedro";
             vecNombres[3] = "Maria";
@@ -32,34 +32,64 @@ namespace prySilvaGUI
 
         private void cmdSiguiente_Click(object sender, EventArgs e)
         {
-
             i++;
-            if (vecNombres.Length > i) {
-                
-                lblNombre.Text = vecNombres[i];
-                cmdAtras.Enabled = true;
-                
-            }
-            else
+            if (vecNombres.Length > i)
             {
-                cmdSiguiente.Enabled = false;
+
+                lblNombre.Text = vecNombres[i];
+
+                if (i > 0)
+                {
+                    cmdAtras.Enabled = true;
+                }
+
+                if ((i + 1) == vecNombres.Length)
+                {
+                    cmdSiguiente.Enabled = false;
+                }
             }
+
         }
 
         private void cmdAtras_Click(object sender, EventArgs e)
         {
-
             i--;
-            if (vecNombres.Length < i) {
-                
-                lblNombre.Text = vecNombres[i];
-                cmdSiguiente.Enabled = true;
-                
-            }
-            else
+            if (vecNombres.Length > i)
             {
-                cmdAtras.Enabled = false;
+
+                lblNombre.Text = vecNombres[i];
+
+                if (i == 0)
+                {
+                    cmdAtras.Enabled = false;
+                }
+
+                if (i > 0)
+                {
+                    cmdSiguiente.Enabled = true;
+                }
+
             }
+
+        }
+
+        private void cmdUltimo_Click(object sender, EventArgs e)
+        {
+           
+            lblNombre.Text = vecNombres[3];
+            
+        }
+
+        private void cmdPrimero_Click(object sender, EventArgs e)
+        {
+            
+            lblNombre.Text = vecNombres[0];
+           
+        }
+
+        private void lblNombre_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

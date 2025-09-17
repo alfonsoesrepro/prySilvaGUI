@@ -35,7 +35,7 @@
             // 
             cmdAbrir.Location = new Point(12, 12);
             cmdAbrir.Name = "cmdAbrir";
-            cmdAbrir.Size = new Size(94, 23);
+            cmdAbrir.Size = new Size(460, 38);
             cmdAbrir.TabIndex = 0;
             cmdAbrir.Text = "Abrir botonera";
             cmdAbrir.UseVisualStyleBackColor = true;

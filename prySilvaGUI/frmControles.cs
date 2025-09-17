@@ -16,7 +16,15 @@ namespace prySilvaGUI
         {
             this.Hide();
             frmBotonera botonera = new frmBotonera();
+            botonera.vecNombres[0] = "También soy hacker";
             botonera.Show();
+
+            int i = 0;
+
+            while (i < botonera.vecNombres.Length)
+            {
+
+            } 
         }
     }
 }

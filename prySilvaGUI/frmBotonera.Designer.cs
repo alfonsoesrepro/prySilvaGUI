@@ -31,11 +31,13 @@
             cmdAtras = new Button();
             cmdSiguiente = new Button();
             lblNombre = new Label();
+            cmdUltimo = new Button();
+            cmdPrimero = new Button();
             SuspendLayout();
             // 
             // cmdAtras
             // 
-            cmdAtras.Location = new Point(108, 281);
+            cmdAtras.Location = new Point(172, 281);
             cmdAtras.Name = "cmdAtras";
             cmdAtras.Size = new Size(75, 23);
             cmdAtras.TabIndex = 0;
@@ -45,7 +47,7 @@
             // 
             // cmdSiguiente
             // 
-            cmdSiguiente.Location = new Point(291, 281);
+            cmdSiguiente.Location = new Point(253, 281);
             cmdSiguiente.Name = "cmdSiguiente";
             cmdSiguiente.Size = new Size(75, 23);
             cmdSiguiente.TabIndex = 1;
@@ -56,11 +58,35 @@
             // lblNombre
             // 
             lblNombre.AutoSize = true;
+            lblNombre.BorderStyle = BorderStyle.Fixed3D;
+            lblNombre.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblNombre.ForeColor = SystemColors.Control;
-            lblNombre.Location = new Point(205, 201);
+            lblNombre.Location = new Point(220, 200);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(0, 15);
+            lblNombre.Size = new Size(60, 17);
             lblNombre.TabIndex = 3;
+            lblNombre.Text = "Nombres";
+            lblNombre.Click += lblNombre_Click;
+            // 
+            // cmdUltimo
+            // 
+            cmdUltimo.Location = new Point(334, 281);
+            cmdUltimo.Name = "cmdUltimo";
+            cmdUltimo.Size = new Size(75, 23);
+            cmdUltimo.TabIndex = 4;
+            cmdUltimo.Text = "Último";
+            cmdUltimo.UseVisualStyleBackColor = true;
+            cmdUltimo.Click += cmdUltimo_Click;
+            // 
+            // cmdPrimero
+            // 
+            cmdPrimero.Location = new Point(91, 281);
+            cmdPrimero.Name = "cmdPrimero";
+            cmdPrimero.Size = new Size(75, 23);
+            cmdPrimero.TabIndex = 5;
+            cmdPrimero.Text = "Primero";
+            cmdPrimero.UseVisualStyleBackColor = true;
+            cmdPrimero.Click += cmdPrimero_Click;
             // 
             // frmBotonera
             // 
@@ -68,10 +94,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
             ClientSize = new Size(484, 461);
+            Controls.Add(cmdPrimero);
+            Controls.Add(cmdUltimo);
             Controls.Add(lblNombre);
             Controls.Add(cmdSiguiente);
             Controls.Add(cmdAtras);
             Name = "frmBotonera";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Botonera";
             Load += frmBotonera_Load;
             ResumeLayout(false);
@@ -83,5 +112,7 @@
         private Button cmdAtras;
         private Button cmdSiguiente;
         private Label lblNombre;
+        private Button cmdUltimo;
+        private Button cmdPrimero;
     }
 }
