@@ -21,7 +21,7 @@ namespace prySilvaGUI
 
             int i = 0;
 
-            while (i < botonera.vecNombres.Length)
+            //while (i < botonera.vecNombres.Length)
             {
 
             } 

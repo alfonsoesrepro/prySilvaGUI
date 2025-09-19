@@ -28,6 +28,7 @@ namespace prySilvaGUI
             vecNombres[3] = "Maria";
 
             lblNombre.Text = vecNombres[i];
+            cmdAtras.Enabled = false;
         }
 
         private void cmdSiguiente_Click(object sender, EventArgs e)
@@ -53,6 +54,7 @@ namespace prySilvaGUI
 
         private void cmdAtras_Click(object sender, EventArgs e)
         {
+            
             i--;
             if (vecNombres.Length > i)
             {
