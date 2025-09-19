@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             cmdAbrir = new Button();
+            lbNombres = new ListBox();
             SuspendLayout();
             // 
             // cmdAbrir
@@ -41,11 +42,21 @@
             cmdAbrir.UseVisualStyleBackColor = true;
             cmdAbrir.Click += cmdAbrir_Click;
             // 
+            // lbNombres
+            // 
+            lbNombres.FormattingEnabled = true;
+            lbNombres.ItemHeight = 15;
+            lbNombres.Location = new Point(12, 74);
+            lbNombres.Name = "lbNombres";
+            lbNombres.Size = new Size(460, 94);
+            lbNombres.TabIndex = 1;
+            // 
             // frmControles
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(484, 461);
+            Controls.Add(lbNombres);
             Controls.Add(cmdAbrir);
             Name = "frmControles";
             StartPosition = FormStartPosition.CenterScreen;
@@ -57,5 +68,6 @@
         #endregion
 
         private Button cmdAbrir;
+        private ListBox lbNombres;
     }
 }

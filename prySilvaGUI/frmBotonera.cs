@@ -37,6 +37,7 @@ namespace prySilvaGUI
             if (vecNombres.Length > i)
             {
 
+                
                 lblNombre.Text = vecNombres[i];
 
                 if (i > 0)
@@ -59,6 +60,7 @@ namespace prySilvaGUI
             if (vecNombres.Length > i)
             {
 
+                
                 lblNombre.Text = vecNombres[i];
 
                 if (i == 0)
@@ -77,16 +79,16 @@ namespace prySilvaGUI
 
         private void cmdUltimo_Click(object sender, EventArgs e)
         {
-           
-            lblNombre.Text = vecNombres[3];
+            i = 3;
+            lblNombre.Text = vecNombres[i];
             
         }
 
         private void cmdPrimero_Click(object sender, EventArgs e)
         {
+            i = 0;
+            lblNombre.Text = vecNombres[i];
             
-            lblNombre.Text = vecNombres[0];
-           
         }
 
         private void lblNombre_Click(object sender, EventArgs e)

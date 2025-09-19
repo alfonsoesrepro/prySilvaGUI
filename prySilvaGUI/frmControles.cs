@@ -14,17 +14,18 @@ namespace prySilvaGUI
 
         private void cmdAbrir_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             frmBotonera botonera = new frmBotonera();
             botonera.vecNombres[0] = "También soy hacker";
             botonera.Show();
 
             int i = 0;
 
-            //while (i < botonera.vecNombres.Length)
+            while (i < botonera.vecNombres.Length)
             {
-
-            } 
+                lbNombres.Items.Add(botonera.vecNombres[i]);
+                i++;
+            }
         }
     }
 }
